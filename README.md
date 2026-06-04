@@ -1,0 +1,3 @@
+基于新架构图像的智能车代码，配好和正常逐飞方案一致的环境就能跑
+
+这个文件夹应该在LS2k0300_LIBRARY/Seekfree_LS2K0300_Opensource_Library下
