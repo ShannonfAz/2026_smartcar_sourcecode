@@ -2,4 +2,6 @@
 
 这些文件夹/文件应该在LS2k0300_LIBRARY/Seekfree_LS2K0300_Opensource_Library下
 
-如需clone，请备份后删除LS2k0300_LIBRARY/Seekfree_LS2K0300_Opensource_Library下的内容，然后在LS2k0300_LIBRARY/Seekfree_LS2K0300_Opensource_Library里git clone git@github.com:ShannonfAz/2026_smartcar_sourcecode.git
+如需clone，请备份后删除LS2k0300_LIBRARY/Seekfree_LS2K0300_Opensource_Library下的内容
+
+然后在LS2k0300_LIBRARY/Seekfree_LS2K0300_Opensource_Library里git clone https://github.com/ShannonfAz/2026_smartcar_sourcecode.git
