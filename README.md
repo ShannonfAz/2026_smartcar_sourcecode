@@ -6,6 +6,6 @@
 
 然后在LS2k0300_LIBRARY/Seekfree_LS2K0300_Opensource_Library里
 
-'''bash
+```bash
 git clone https://github.com/ShannonfAz/2026_smartcar_sourcecode.git
-'''
+```
