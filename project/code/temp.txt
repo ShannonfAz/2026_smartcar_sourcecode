@@ -1,0 +1,43 @@
+cv::Point imgprocess::balinyu_suanzi(cv::Point coord_input,bool l_r,bool if_draw){
+    balinyu_point temp;
+    if(l_r){//右
+        if(if_draw){
+            ips200.draw_point(coord_input.x*3/4,coord_input.y*3/4,RGB565_BLUE);
+        }
+        for(int i = 0;i < 8;i++){
+            if(!balinyu_linyu(coord_input,i)&&balinyu_linyu(coord_input,i-1)){
+                temp.coord = coord_input;
+                temp.dir = i;
+                if(l_line_enum.lineenum.empty()){
+                    if(coord_input.x >= 5)temp.useful = 1;
+                }else{
+                    temp.useful = l_line_enum.lineenum.back().useful;
+                    if(coord_input.x >= 5)temp.useful = 1;
+                }
+                l_line_enum.push_back(temp);
+                has_enter.at(temp.coord.x).at(temp.coord.y)++;
+                return balinyu_next_point(coord_input,i);
+            }
+        }
+    }else{//左
+        if(if_draw){
+            ips200.draw_point(coord_input.x*3/4,coord_input.y*3/4,RGB565_RED);
+        }
+        for(int i = 0;i < 8;i++){
+            if(!balinyu_linyu(coord_input,i)&&balinyu_linyu(coord_input,i+1)){
+                temp.coord = coord_input;
+                temp.dir = i;
+                if(r_line_enum.lineenum.empty()){
+                    if(coord_input.x >= 5)temp.useful = 1;
+                }else{
+                    temp.useful = r_line_enum.lineenum.back().useful;
+                    if(coord_input.x >= 5)temp.useful = 1;
+                }
+                r_line_enum.push_back(temp);
+                has_enter.at(temp.coord.x).at(temp.coord.y)++;
+                return balinyu_next_point(coord_input,i);
+            }
+        }
+    }
+    return cv::Point(-1,-1);
+}

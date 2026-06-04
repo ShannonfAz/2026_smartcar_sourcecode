@@ -1,0 +1,147 @@
+#include "ips200_show.hpp"
+ips200_show::ips200_show(){
+
+}
+ips200_show::~ips200_show(){
+
+}
+void ips200_show::init(){
+    operation_count.assign(256,-1);
+    ips200.init(FB_PATH);
+}
+void ips200_show::clear(){
+    operation_list.push_back(0);
+}
+void ips200_show::full(const uint16 color){
+    operation_list.push_back(1);
+    _full.push_back(color);
+}
+void ips200_show::draw_point(uint16 x, uint16 y, const uint16 color){
+    operation_list.push_back(2);
+    drawpoint.push_back({x,y,color});
+}
+void ips200_show::draw_line(uint16 x_start, uint16 y_start, uint16 x_end, uint16 y_end, const uint16 color){
+    operation_list.push_back(3);
+    drawline.push_back({x_start,y_start,x_end,y_end,color});
+}
+void ips200_show::show_char(uint16 x, uint16 y, const char dat){
+    operation_list.push_back(4);
+    showchar.push_back({x,y,dat});
+}
+void ips200_show::show_string(uint16 x, uint16 y, const char dat[]){
+    operation_list.push_back(5);
+    showstring.push_back({x,y,*dat});
+}
+void ips200_show::show_int(uint16 x, uint16 y, const int32 dat, uint8 num){
+    operation_list.push_back(6);
+    showint.push_back({x,y,dat,num});
+}
+void ips200_show::show_uint(uint16 x, uint16 y, const uint32 dat, uint8 num){
+    operation_list.push_back(7);
+    showuint.push_back({x,y,dat,num});
+}
+void ips200_show::show_float(uint16 x, uint16 y, const double dat, uint8 num, uint8 pointnum){
+    operation_list.push_back(8);
+    showfloat.push_back({x,y,dat,num,pointnum});
+}
+void ips200_show::show_gray_image(uint16 x, uint16 y, uint8 *image, uint16 width, uint16 height){
+    operation_list.push_back(9);
+    showgrayimage.push_back({x,y,image,width,height});
+}
+void ips200_show::show_rgb_image(uint16 x, uint16 y, uint16 *image, uint16 width, uint16 height){
+    operation_list.push_back(9);
+    showrgbimage.push_back({x,y,image,width,height});
+}
+void ips200_show::run(){
+    if(!operation_list.empty()){
+        for(auto rnm:operation_list){
+            operation_count.at(rnm)++;
+            switch(rnm){
+                case 0:
+                    ips200.clear();
+                    break;
+                case 1:
+                    ips200.full(_full.at(operation_count.at(1)));
+                    break;
+                case 2:
+                    ips200.draw_point(
+                        drawpoint.at(operation_count.at(2)).x,
+                        drawpoint.at(operation_count.at(2)).y,
+                        drawpoint.at(operation_count.at(2)).color
+                    );
+                    break;
+                case 3:
+                    ips200.draw_line(
+                        drawline.at(operation_count.at(3)).x_start,
+                        drawline.at(operation_count.at(3)).y_start,
+                        drawline.at(operation_count.at(3)).x_end,
+                        drawline.at(operation_count.at(3)).y_end,
+                        drawline.at(operation_count.at(3)).color
+                    );
+                    break;
+                case 4:
+                    ips200.show_char(
+                        showchar.at(operation_count.at(4)).x,
+                        showchar.at(operation_count.at(4)).y,
+                        showchar.at(operation_count.at(4)).dat
+                    );
+                    break;
+                case 5:
+                    ips200.show_string(
+                        showstring.at(operation_count.at(5)).x,
+                        showstring.at(operation_count.at(5)).y,
+                        showstring.at(operation_count.at(5)).dat
+                    );
+                    break;
+                case 6:
+                    ips200.show_int(
+                        showint.at(operation_count.at(6)).x,
+                        showint.at(operation_count.at(6)).y,
+                        showint.at(operation_count.at(6)).dat,
+                        showint.at(operation_count.at(6)).num
+                    );
+                    break;
+                case 7:
+                    ips200.show_uint(
+                        showuint.at(operation_count.at(7)).x,
+                        showuint.at(operation_count.at(7)).y,
+                        showuint.at(operation_count.at(7)).dat,
+                        showuint.at(operation_count.at(7)).num
+                    );
+                    break;
+                case 8:
+                    ips200.show_float(
+                        showfloat.at(operation_count.at(8)).x,
+                        showfloat.at(operation_count.at(8)).y,
+                        showfloat.at(operation_count.at(8)).dat,
+                        showfloat.at(operation_count.at(8)).num,
+                        showfloat.at(operation_count.at(8)).pointnum
+                    );
+                    break;
+                case 9:
+                    ips200.show_gray_image(
+                        showgrayimage.at(operation_count.at(9)).x,
+                        showgrayimage.at(operation_count.at(9)).y,
+                        showgrayimage.at(operation_count.at(9)).image,
+                        showgrayimage.at(operation_count.at(9)).width,
+                        showgrayimage.at(operation_count.at(9)).height
+                    );
+                    break;
+                case 10:
+                    ips200.show_rgb_image(
+                        showrgbimage.at(operation_count.at(10)).x,
+                        showrgbimage.at(operation_count.at(10)).y,
+                        showrgbimage.at(operation_count.at(10)).image,
+                        showrgbimage.at(operation_count.at(10)).width,
+                        showrgbimage.at(operation_count.at(10)).height
+                    );
+                    break;
+                default:
+                    std::cerr << "操你妈，操作码无效" << std::endl;
+                    break;
+            }
+        }
+        operation_list.clear();
+        operation_count.assign(256,-1);
+    }
+}

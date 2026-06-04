@@ -1,0 +1,3 @@
+[submodule "libraries/zf_components/tflm"]
+	path = libraries/zf_components/tflm
+	url = git@github.com:ShannonfAz/tflm_allop.git
