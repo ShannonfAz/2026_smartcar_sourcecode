@@ -13,3 +13,5 @@
 ```bash
 git clone https://github.com/ShannonfAz/2026_smartcar_sourcecode.git
 ```
+
+哦对了，记得把编码器改成你车上的编码器种类，我这是方向编码器，你那可不一定
