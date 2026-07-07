@@ -15,3 +15,11 @@ git clone https://github.com/ShannonfAz/2026_smartcar_sourcecode.git
 ```
 
 哦对了，记得把编码器改成你车上的编码器种类，我这是方向编码器，你那可不一定
+
+---
+
+更新日志：
+
+2026.6.4 建仓库
+
+2026.7.7 精简道路分类模型，平均推理时间从6ms降为250ns
