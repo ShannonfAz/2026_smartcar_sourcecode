@@ -31,7 +31,7 @@ git clone https://github.com/ShannonfAz/2026_smartcar_sourcecode.git
 
 2026.6.4 建仓库
 
-2026.7.7 精简道路分类模型，平均推理时间从6ms降为250ns
+2026.7.7 精简道路分类模型，平均推理时间从6ms降为250us
 
 ---
 
