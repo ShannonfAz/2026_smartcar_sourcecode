@@ -197,6 +197,9 @@ int main(int, char**)
 {
 	std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+    auto _start = std::chrono::high_resolution_clock::now();
+    auto _end   = std::chrono::high_resolution_clock::now();
+    auto _dur   = std::chrono::duration_cast<std::chrono::nanoseconds>(_end - _start).count();
     adc_scale = battery_adc.get_scale();
     encoder_l_count = 0;
     encoder_r_count = 0;
@@ -208,7 +211,7 @@ int main(int, char**)
     }
     {
         using json = nlohmann::json;
-        std::ifstream ifs("/home/root/byd_2026_5_24.json");
+        std::ifstream ifs("/home/root/byd_2026_5_26.json");
         json data;
         try {
             data = json::parse(ifs);
@@ -242,7 +245,11 @@ int main(int, char**)
             }
 
             // 执行推理
+            _start = std::chrono::high_resolution_clock::now();
             std::vector<float> probs = classifier.run(points);
+            _end   = std::chrono::high_resolution_clock::now();
+            _dur   = std::chrono::duration_cast<std::chrono::nanoseconds>(_end - _start).count();
+            std::cout << "runtime: " << _dur << " ns" << std::endl;  
             if (probs.empty()) {
                 std::cerr << "推理失败" << std::endl;
                 continue;
@@ -296,9 +303,6 @@ int main(int, char**)
     pit_timer.init_ms(10, pit_callback);
     pit_timer1.init_ms(10, pit_callback1);
     pit_timer2.init_ms(1000, pit_callback2);
-    auto _start = std::chrono::high_resolution_clock::now();
-    auto _end   = std::chrono::high_resolution_clock::now();
-    auto _dur   = std::chrono::duration_cast<std::chrono::nanoseconds>(_end - _start).count();
     // auto _start1 = std::chrono::high_resolution_clock::now();
     // auto _end1   = std::chrono::high_resolution_clock::now();
     // auto _dur1   = std::chrono::duration_cast<std::chrono::nanoseconds>(_end - _start).count();

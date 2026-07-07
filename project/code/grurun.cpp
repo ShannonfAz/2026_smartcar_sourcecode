@@ -1,20 +1,15 @@
 #include "grurun.hpp"
-#include "gru_weights.h"   // 由 export_weights.py 生成，包含所有权重常量
+#include "gru_weights.h"   // 由 export_weights.py 生成（input_dim=3, hidden_dim=8）
 #include <cmath>
-#include <opencv2/opencv.hpp>
-#include <opencv2/imgproc/imgproc.hpp>  // for cv::cvtColor
-#include <opencv2/highgui/highgui.hpp> // for cv::VideoCapture
-#include <opencv2/dnn.hpp>
-#include <iostream> // for std::cerr
-#include <fstream>  // for std::ofstream
-#include <thread>
-#include <chrono>
-#include <atomic>
 
 // ======================== 预处理统计量 ========================
-// 从 feat_stats.npz 中提取，必须与训练时一致！
-static const float FEAT_MEAN[5] = { 1.26657093f, 0.00101598f, 0.00324430f, 0.02902596f, 9.79611111f };
-static const float FEAT_STD[5]  = { 6.82215166f, 9.76642132f, 0.32148936f, 0.28311643f, 6.89678526f };
+// 从新训练的 feat_stats.npz 中提取（维度：3）
+// 请用 Python 读取后替换下面的值：
+//     import numpy as np
+//     data = np.load('feat_stats.npz')
+//     print(data['mean'], data['std'])
+static const float FEAT_MEAN[5] = { 1.26657093f, 0.00101598f, 0.00324430f };
+static const float FEAT_STD[5]  = { 6.82215166f, 9.76642132f, 0.32148936f };
 
 // ======================== 激活函数 ========================
 inline float RoadShapeClassifier::sigmoid(float x) {
@@ -24,13 +19,11 @@ inline float RoadShapeClassifier::tanh(float x) {
     return std::tanh(x);
 }
 
-// ======================== 构造与析构 ========================
 RoadShapeClassifier::RoadShapeClassifier()  = default;
 RoadShapeClassifier::~RoadShapeClassifier() = default;
 
-// ======================== 初始化 ========================
 bool RoadShapeClassifier::init() {
-    return true;   // 手写推理无需分配内存，总是成功
+    return true;
 }
 
 // ======================== 推理主函数 ========================
@@ -133,7 +126,7 @@ std::vector<float> RoadShapeClassifier::run(const std::vector<cv::Point>& points
 // ======================== 预处理 ========================
 void RoadShapeClassifier::preprocess(const std::vector<cv::Point>& points,
                                      float feat[][kInputDim]) {
-    // 1. 计算位移 (dx, dy)
+    // 1. 位移 (dx, dy)
     float diff[kSeqLen][2];
     for (int i = 0; i < kSeqLen - 1; ++i) {
         diff[i][0] = static_cast<float>(points[i+1].x - points[i].x);
@@ -152,21 +145,17 @@ void RoadShapeClassifier::preprocess(const std::vector<cv::Point>& points,
         dir_vec[i][1] = diff[i][1] / len;
     }
 
-    // 3. 方向变化 (dir_diff)
-    float dir_diff[kSeqLen][2];
+    // 3. 方向变化 (ddir_x)，只取 x 分量
+    float ddir_x[kSeqLen];
     for (int i = 0; i < kSeqLen - 1; ++i) {
-        dir_diff[i][0] = dir_vec[i+1][0] - dir_vec[i][0];
-        dir_diff[i][1] = dir_vec[i+1][1] - dir_vec[i][1];
+        ddir_x[i] = dir_vec[i+1][0] - dir_vec[i][0];
     }
-    dir_diff[kSeqLen-1][0] = dir_diff[kSeqLen-2][0];
-    dir_diff[kSeqLen-1][1] = dir_diff[kSeqLen-2][1];
+    ddir_x[kSeqLen-1] = ddir_x[kSeqLen-2];
 
-    // 4. Z-score 归一化并组合特征
+    // 4. Z-score 归一化并填入特征（仅 3 维：dx, dy, ddir_x）
     for (int i = 0; i < kSeqLen; ++i) {
         feat[i][0] = (diff[i][0] - FEAT_MEAN[0]) / FEAT_STD[0];
         feat[i][1] = (diff[i][1] - FEAT_MEAN[1]) / FEAT_STD[1];
-        feat[i][2] = (dir_diff[i][0] - FEAT_MEAN[2]) / FEAT_STD[2];
-        feat[i][3] = (dir_diff[i][1] - FEAT_MEAN[3]) / FEAT_STD[3];
-        feat[i][4] = (norm[i] - FEAT_MEAN[4]) / FEAT_STD[4];
+        feat[i][2] = (ddir_x[i] - FEAT_MEAN[2]) / FEAT_STD[2];
     }
 }
