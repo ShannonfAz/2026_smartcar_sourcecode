@@ -681,30 +681,6 @@ home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/pro
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.cpp.s
 .PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.cpp.s
 
-home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.o: home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o
-.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.o
-
-# target to build an object file
-home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o
-.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o
-
-home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.i: home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.i
-.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.i
-
-# target to preprocess a source file
-home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.i
-.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.i
-
-home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.s: home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.s
-.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.s
-
-# target to generate assembly for a file
-home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.s
-.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.s
-
 home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.o: home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o
 .PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.o
 
@@ -728,6 +704,30 @@ home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/pro
 home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.s
 .PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.s
+
+home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.o: home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o
+.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.o
+
+# target to build an object file
+home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o
+.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o
+
+home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.i: home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.i
+.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.i
+
+# target to preprocess a source file
+home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.i
+.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.i
+
+home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.s: home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.s
+.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.s
+
+# target to generate assembly for a file
+home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.s
+.PHONY : home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -831,12 +831,12 @@ help:
 	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.o"
 	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.i"
 	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.s"
-	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.o"
-	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.i"
-	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.s"
 	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.o"
 	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.i"
 	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.s"
+	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.o"
+	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.i"
+	@echo "... home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

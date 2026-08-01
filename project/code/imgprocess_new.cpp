@@ -197,74 +197,74 @@ int imgprocess::run(cv::Mat rgb_input,cv::Mat gray_input){
     // std::cout << 5 << std::endl;
     filter();
     // std::cout << 6 << std::endl;
-    // int type = grurun();
+    // int type = lstmrun();
     // ips200.show_string(0,180,"                             ");
     // ips200.show_string(0,180,classifier.labels[type]);
-    // if(key_3.get_level() == 0){
-    //     system_delay_ms(100);
-    //     if(key_3.get_level() == 0){
+    if(key_3.get_level() == 0){
+        system_delay_ms(100);
+        if(key_3.get_level() == 0){
 
-    //         using json = nlohmann::json;
-    //         json root;
-    //         std::ifstream ifs("/home/root/byd_2026_5_26.json");
-    //         if (ifs.is_open()) {
-    //             try {
-    //                 ifs >> root;
-    //             } catch (...) {
-    //                 root = json::array();  // 解析失败则覆盖为空数组
-    //             }
-    //             ifs.close();
-    //         } else {
-    //             root = json::array();      // 文件不存在则新建空数组
-    //         }
-    //         json points;
-    //         std::vector<int> a,b;
-    //         for(auto rnm:all_line_enum.DP_point){
-    //             a.push_back(rnm.second);
-    //         }
-    //         b = byd_math::json_output_place(a);
-    //         // for(auto rnm:a)std::cout << rnm << " ";
-    //         // std::cout << std::endl;
-    //         // for(auto rnm:b)std::cout << rnm << " ";
-    //         // std::cout << std::endl;
-    //         for(auto rnm:b){
-    //             points.push_back({std::lround(all_line_enum.lineenum.at(rnm).coord.x),std::lround(all_line_enum.lineenum.at(rnm).coord.y)});
-    //         }
-    //         json sample = {
-    //             {"point",points},
-    //             {"label","zhixian"}
-    //         };
-    //         /*
-    //         lable:
-    //         simple
-    //         cross
-    //         circle
-    //         */
-    //         /*
-    //         lable:
-    //         zhixian
-    //         shizi
-    //         daodazuohuandao//左环岛初见部分，拐点在左下方
-    //         jinruzuohuandao//左环岛前方部分，拐点在左上方
-    //         likaizuohuandao//左环岛离开部分，拐点在右下方
-    //         daodayouhuandao
-    //         jinruyouhuandao
-    //         likaiyouhuandao
-    //         */
-    //         root.push_back(sample);
-    //         std::ofstream ofs("/home/root/byd_2026_5_26.json");
-    //         ofs << root.dump(4);
-    //         ofs.close();
-    //     }
-    // }
+            using json = nlohmann::json;
+            json root;
+            std::ifstream ifs("/home/root/byd_2026_8_1.json");
+            if (ifs.is_open()) {
+                try {
+                    ifs >> root;
+                } catch (...) {
+                    root = json::array();  // 解析失败则覆盖为空数组
+                }
+                ifs.close();
+            } else {
+                root = json::array();      // 文件不存在则新建空数组
+            }
+            json points;
+            std::vector<int> a,b;
+            for(auto rnm:all_line_enum.DP_point){
+                a.push_back(rnm.second);
+            }
+            b = byd_math::json_output_place(a);
+            // for(auto rnm:a)std::cout << rnm << " ";
+            // std::cout << std::endl;
+            // for(auto rnm:b)std::cout << rnm << " ";
+            // std::cout << std::endl;
+            for(auto rnm:b){
+                points.push_back({std::lround(all_line_enum.lineenum.at(rnm).coord.x),std::lround(all_line_enum.lineenum.at(rnm).coord.y)});
+            }
+            json sample = {
+                {"point",points},
+                {"label","zhixian"}
+            };
+            /*
+            lable:
+            simple
+            cross
+            circle
+            */
+            /*
+            lable:
+            zhixian
+            shizi
+            daodazuohuandao//左环岛初见部分，拐点在左下方
+            jinruzuohuandao//左环岛前方部分，拐点在左上方
+            likaizuohuandao//左环岛离开部分，拐点在右下方
+            daodayouhuandao
+            jinruyouhuandao
+            likaiyouhuandao
+            */
+            root.push_back(sample);
+            std::ofstream ofs("/home/root/byd_2026_7_31.json");
+            ofs << root.dump(4);
+            ofs.close();
+        }
+    }
     // std::cout << std::endl;
     // for(auto rnm:all_line_enum.DP_point){
     //     std::cout << rnm.first << std::endl;
     // }
-    // all_line_enum.drawDP();
+    //all_line_enum.drawDP();
 
 
-    //grurun();
+    lstmrun();
     typesort();
 
     // ips200.show_int(0,196,lhd,3);
@@ -319,7 +319,7 @@ int imgprocess::run(cv::Mat rgb_input,cv::Mat gray_input){
     
 }
 
-int imgprocess::grurun(){
+int imgprocess::lstmrun(){
     auto _start = std::chrono::high_resolution_clock::now();
     std::vector<int> a,b;
     for(auto rnm:all_line_enum.DP_point){
@@ -344,7 +344,7 @@ int imgprocess::grurun(){
             type = i;
         }
     }
-    std::cout << classifier.labels[type] << std::endl;
+    std::cout << classifier.labels[type] << ':' << maxprob << std::endl;
     auto _end   = std::chrono::high_resolution_clock::now();
     auto _dur   = std::chrono::duration_cast<std::chrono::nanoseconds>(_end - _start).count();
     //std::cout << "runtime: " << _dur << " ns" << std::endl;
@@ -698,7 +698,7 @@ void imgprocess::typesort(){
     }
     if(encoder_l_count+encoder_r_count > ban_hd_time){
         if(u_l && !d_r && !l_d && lhd != 2 && rhd != 2){
-            if(grurun() == 2){
+            if(lstmrun() == 2){
                 hd_enter_time = encoder_l_count + encoder_r_count + 20000;
                 if(lhd == 0){
                     lhd = 1;
@@ -709,7 +709,7 @@ void imgprocess::typesort(){
             return;
         }
         else if(!u_l && !r_u && l_d && lhd != 2 && rhd != 2){
-            if(grurun() == 4){
+            if(lstmrun() == 4){
                 hd_enter_time = encoder_l_count + encoder_r_count + 20000;
                 if(rhd == 0){
                     rhd = 1;
@@ -722,7 +722,7 @@ void imgprocess::typesort(){
         if(nowtype == 0){
             if(encoder_l_count+encoder_r_count <= hd_enter_time){
                 if(lhd == 1 && r_u ){
-                    if(grurun() == 3){
+                    if(lstmrun() == 3){
                         lhd = 2;
                         nowtype = 0;
                         //ban_hd_time = encoder_l_count + encoder_r_count + 25000;
@@ -731,7 +731,7 @@ void imgprocess::typesort(){
                     }
                 }
                 else if(rhd == 1 && d_r ){
-                    if(grurun() == 5){
+                    if(lstmrun() == 5){
                         rhd = 2;
                         nowtype = 0;
                         //ban_hd_time = encoder_l_count + encoder_r_count + 25000;
@@ -761,7 +761,7 @@ void imgprocess::typesort(){
             }
         }else{
             if(lhd == 2 && r_u && !u_l && !d_r && !l_d){
-                if(grurun() == 3){
+                if(lstmrun() == 3){
                     lhd = 0;
                     nowtype = 0;
                     ban_hd_time = encoder_l_count + encoder_r_count + 25000;
@@ -770,7 +770,7 @@ void imgprocess::typesort(){
                 }
             }
             else if(rhd == 2 && d_r && !u_l && !r_u && !l_d){
-                if(grurun() == 5){
+                if(lstmrun() == 5){
                     rhd = 0;
                     nowtype = 0;
                     ban_hd_time = encoder_l_count + encoder_r_count + 25000;
@@ -1275,8 +1275,35 @@ void imgprocess::fnlmidline(int type){
 
 }
 
-
-
+void imgprocess::fnlcircle(){
+    /*
+    点到圆心的平方实质为距离的平方
+    设圆心为cv::Point(159.5,0)
+    当前点为cv::Point(nowmidpoint.x,239-nowmidpoint.y+camlen)
+    则距离平方为
+    */
+}
+// cv::Point nowmidpoint = cv::Point(-1,-1);
+// cv::Point carmidpoint = cv::Point(159.5,0);
+// int camlen = 40;
+// int lj = 31;
+// float msp = 110;
+// float P = 4.5;
+// void pit_callback1(void)
+// {
+//     //std::cout << encoder_l_count+encoder_r_count << std::endl;
+//     if(nowmidpoint.x >= 0 && nowmidpoint.y >= 0){
+//         cv::Point realmidpoint = cv::Point(nowmidpoint.x,239-nowmidpoint.y+camlen);
+//         cv::Point realdir = realmidpoint - carmidpoint;
+//         float r = (cv::norm(realdir)/2.0)/(realdir.x/cv::norm(realdir));
+//         if(std::abs(r)<1)return;
+//         float finalsp = msp * (1.0-0.3*std::abs(realdir.x/cv::norm(realdir)));
+//         // if(imu_acc_z > -3500)finalsp /= 2.0;
+//         // if(imu_acc_z < -4500)finalsp *= 2.0;
+//         float lsp = finalsp*(1.0+(lj/(2.0*r))*P);
+//         float rsp = finalsp*(1.0-(lj/(2.0*r))*P);
+//         lsp -= (imu_gyro_z / finalsp)*1.4;
+//         rsp += (imu_gyro_z / finalsp)*1.4;
 
 
 

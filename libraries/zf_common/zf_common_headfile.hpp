@@ -106,7 +106,7 @@
 #include "byd_math.hpp"
 #include "imgprocess_new.hpp"
 #include "control.hpp"
-#include "grurun.hpp"
+#include "lstmrun.hpp"
 #include "json.hpp"
 extern zf_device_ips200 ips200;
 extern zf_driver_pwm drv8701e_pwm_1;

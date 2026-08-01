@@ -310,7 +310,7 @@ int main(int, char**)
         //std::cout << encoder_l_count+encoder_r_count << std::endl;
         _end   = std::chrono::high_resolution_clock::now();
         _dur   = std::chrono::duration_cast<std::chrono::nanoseconds>(_end - _start).count();
-        // std::cout << "runtime: " << _dur << " ns" << std::endl;  
+        std::cout << "runtime: " << _dur << " ns" << std::endl;  
         _start = std::chrono::high_resolution_clock::now();
 
         status = 0;

@@ -156,7 +156,11 @@ void pushbackline(std::vector<cv::Point>& line, cv::Point start, cv::Point end);
 void splitline(int type = 0);
 void fnlmidline(int type = 0);
 
-int grurun();
+void fnlcircle();
+
+
+
+int lstmrun();
 
 
 void cross_circle(bool if_draw = 1);

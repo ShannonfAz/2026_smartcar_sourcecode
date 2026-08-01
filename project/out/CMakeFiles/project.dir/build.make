@@ -111,24 +111,10 @@ CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.cpp.s"
 	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.cpp -o CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.cpp.s
 
-CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o: /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp
-CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o"
-	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o -MF CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o.d -o CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o -c /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp
-
-CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.i"
-	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp > CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.i
-
-CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.s"
-	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp -o CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.s
-
 CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o: /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp
 CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o"
 	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o -MF CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o.d -o CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o -c /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp
 
 CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.i: cmake_force
@@ -138,6 +124,20 @@ CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300
 CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.s"
 	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp -o CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.s
+
+CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o: /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp
+CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o"
+	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o -MF CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o.d -o CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o -c /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp
+
+CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.i"
+	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp > CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.i
+
+CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.s"
+	/opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/bin/loongarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp -o CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.s
 
 CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_fifo.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_fifo.cpp.o: /home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_fifo.cpp
@@ -438,8 +438,8 @@ project_OBJECTS = \
 "CMakeFiles/project.dir/main.cpp.o" \
 "CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/byd_math.cpp.o" \
 "CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.cpp.o" \
-"CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o" \
 "CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o" \
+"CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o" \
 "CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_fifo.cpp.o" \
 "CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_font.cpp.o" \
 "CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_function.cpp.o" \
@@ -468,8 +468,8 @@ project_EXTERNAL_OBJECTS =
 project: CMakeFiles/project.dir/main.cpp.o
 project: CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/byd_math.cpp.o
 project: CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/control.cpp.o
-project: CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/grurun.cpp.o
 project: CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/imgprocess_new.cpp.o
+project: CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/project/code/lstmrun.cpp.o
 project: CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_fifo.cpp.o
 project: CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_font.cpp.o
 project: CMakeFiles/project.dir/home/shannonfaz/car2026/LS2K300_Library/Seekfree_LS2K0300_Opensource_Library/libraries/zf_common/zf_common_function.cpp.o
